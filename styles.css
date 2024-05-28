@@ -1,0 +1,323 @@
+/* universal styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+:root{
+    --primary-color:  #5040A1;
+    --secondary-color:  #FE6060;
+    --tertiary-color: #ffffff;
+
+}
+
+
+/* reset */
+ul{
+    list-style-type: none;
+}
+a, i{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: capitalize;
+    
+}
+p{
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+h1{
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+}
+h2{
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+h3{
+    font-size: 15px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+}
+h4{
+    color: #000000;
+    font-weight: 700;
+    font-size: 14px;
+}
+h5{
+    color: #000000;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+figcaption{
+    font-size: 0.7rem;
+    color: #C1C1C1;
+}
+.margin-head{
+    margin: 40px 0;
+}
+.margin-mini{
+    margin: 10px 0;
+}
+.padding-head{
+    padding: 30px 20px;
+}
+.padding-mini{
+    padding: 20px 0;
+}
+
+
+/* base styles */
+body{
+    width: auto;
+    overflow-x: hidden;
+}
+
+
+/* mobile styles */
+header > nav{
+}
+header > nav > div.menu-container{
+    background-image: url(assests/mobile-hero.png);
+    min-width: 20%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+main{
+    box-shadow: 0px 0px 3px #333;
+    border-radius: 30px 30px 0 0;
+    position: relative;
+    top: -3em;
+    z-index: 100;
+    background-color: #ffffff;
+    background-color: whitesmoke;
+}
+.workshop-heading{
+    display: flex;
+}
+
+.workshop-heading a{
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.date-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.person-container,
+.person,
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+.person img{
+    margin-right: 20px;
+}
+
+
+
+/* event container */
+.event-container > div > div{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.event-container > div > div img{
+    margin-right: 20px;
+}
+
+
+
+/* about section */
+.plus-icon i{
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+/* faq section */
+.faq-head h2{
+    padding-bottom: 10px;
+}
+.question{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px #c1c1c1;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 20px 20px;
+}
+
+
+/* submit question section */
+.qtn-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.qtn-input input{
+    padding: 10px 20px;
+}
+.qtn-input button{
+    margin: 10px;
+    width: 60px;
+    padding: 10px 10px;
+    text-align: center;
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+
+
+/* footer section */
+footer .mobile-footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 3px #333;
+    padding: 20px ;
+}
+footer .desktop-footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 200;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 3px #333;
+    padding: 0 50px ;
+}
+.flexed-img-container{
+    display: none;
+}
+.hide{
+    display: none;
+}
+.footer-container button{
+    color: var(--tertiary-color);
+    background-color: var(--primary-color);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+
+
+@media screen and (min-width: 800px){
+    body,html{
+        font-size: 18px;
+    }
+    .workshop-heading a{
+        display: none;
+    }
+    header > nav > div.menu-container{
+        background-image: url(assests/hero-bg.png);
+    }
+    .menu,
+    .hide-date,
+    .hide-about-host,
+    .mobile-footer{
+        display: none;
+    }
+    main{
+        box-shadow: 0px 0px 3px #fff;
+        border-radius: 0 0 0 0;
+        top: -1.5em;
+        padding: 20px 0;
+    }
+    .event-container{
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-between;
+    }
+    main > div,
+    .about-flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+    .about-flex-container{
+        align-items: flex-start;
+        margin: 50px 0;
+    }
+    .workshop-event,
+    .about-and-faq{
+        width: 60%;
+    }
+    .flexed-img-container{
+        display: block;
+        width: 300px;
+        height: auto;
+        background-color: #fff;
+        box-shadow: 0px 0px 3px #ccc;
+        border-radius: 10px;
+
+    }
+    .flexed-img-container h2{
+        display: none;
+    }
+    .desktop-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flex-date{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .flex-date > div{
+        padding: 0 20px;
+    }
+    .footer-container > div{
+        padding: 0 20px;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px){
+    body,html{
+        font-size: 20px;
+    }
+}
